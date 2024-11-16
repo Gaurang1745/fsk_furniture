@@ -5,7 +5,7 @@ const PaginationComponent = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1); // If your API provides total pages
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   // // Fetch products when the page changes
   // const fetchProducts = async (page) => {

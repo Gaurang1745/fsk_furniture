@@ -3,7 +3,8 @@ import { hero } from "../data";
 import Stats from "./Stats";
 
 const Hero = () => {
-  const { title, subtitle, buttonText } = hero;
+  // const { title, subtitle, buttonText } = hero;
+  const { title, subtitle } = hero;
   return (
     <section className="w-full h-[850px] bg-hero bg-right bg-cover bg-no-repeat text-white pt-[225px] pb-[254px]  relative mb-12 lg:bg-cover lg:mb-28">
       <div className="container mx-auto text-center">

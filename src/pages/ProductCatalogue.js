@@ -3,7 +3,8 @@ import { products } from "../data";
 import PaginationComponent from "../components/PaginationComponent";
 import { useParams } from "react-router-dom";
 const ProductCatalogue = () => {
-  const { title, subtitle } = products;
+  // const { title, subtitle } = products;
+  const { subtitle } = products;
   //get category from the params
   const { category } = useParams();
   return (
