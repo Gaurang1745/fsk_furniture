@@ -28,6 +28,7 @@ const CategorySlider = () => {
         // console.log(response.data);
 
         setCategories(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
       } finally {
@@ -51,7 +52,7 @@ const CategorySlider = () => {
     >
       <SwiperSlide key={0}>
         <div className="grid grid-cols-2 gap-x-5 md:grid-cols-3 lg:grid-cols-4 lg: gap-5 lg:gap-10">
-          {categories.map((category, index) => (
+          {categories && categories.length > 0 && categories.map((category, index) => (
             <Link
               to={`/categories/${category.urlName}`}
               key={index}
