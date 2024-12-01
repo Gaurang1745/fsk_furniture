@@ -1,6 +1,6 @@
 import React from "react";
 import { features } from "../data";
-
+import preview from "../assets/images/preview.jpg";
 const Features = () => {
   const { title, subtitle, image, items } = features;
   return (
@@ -10,7 +10,7 @@ const Features = () => {
         <div className="pt-10 lg:p-0 rounded">
           <img
             className="object-cover"
-            src={image.type}
+            src={image.type || preview}
             alt="Furniture Sofa & Table"
           />
         </div>

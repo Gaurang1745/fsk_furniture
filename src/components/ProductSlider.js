@@ -1,5 +1,6 @@
 import { products } from "../data";
 
+import preview from "../assets/images/preview.jpg";
 // Importing React Icons
 // import { HiPlus } from "react-icons/hi";
 
@@ -16,7 +17,7 @@ const ProductSlider = () => {
           className="max-w-[290px] max-h-[400px] w-full text-left"
         >
           <div className="border hover:border-accent w-full max-w-[285px] h-[292px] flex items-center justify-center relative transition rounded-lg hover:shadow-md hover:cursor-pointer hover:transition">
-            <img src={product.image.type} alt={product.name} />
+            <img src={product.image.type || preview} alt={product.name} />
             {/* <div
 									className='absolute right-3 bottom-3 border-spacing-1 
 						border-2 p-0.5 rounded-full bg-gray-300 transition'

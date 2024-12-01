@@ -37,3 +37,44 @@ select,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
+.markdown > * {
+  all: revert;
+}
+
+/* Style for tables */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse; /* Ensure no gaps between table cells */
+  margin: 20px 0;
+  background-color: #fff; /* Optional: make sure background is white */
+}
+
+/* Style for table headers */
+.markdown th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Style for table cells */
+.markdown td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Optional: Style for table row hover effect */
+.markdown tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Custom CSS to hide scrollbar but keep the horizontal scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

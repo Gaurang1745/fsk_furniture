@@ -31,21 +31,45 @@ import Avatar1Img from "./assets/images/avatar-1.png";
 import Avatar2Img from "./assets/images/avatar-2.png";
 import Avatar3Img from "./assets/images/avatar-3.png";
 
+// export const navigation = [
+//   {
+//     name: "home",
+//     href: "/",
+//   },
+//   {
+//     name: "about",
+//     href: "/about",
+//   },
+//   {
+//     name: "features",
+//     href: "/features",
+//   },
+//   {
+//     name: "contact",
+//     href: "/contact",
+//   },
+// ];
 export const navigation = [
   {
-    name: "home",
+    name: "Home",
     href: "/",
   },
   {
-    name: "about",
+    name: "Shop",
+    subMenu: [
+      { name: "Chairs", href: "/categories/chairs" },
+      { name: "Beds", href: "/categories/beds" },
+      { name: "Sofas", href: "/categories/sofa-sets" },
+      {name : "Cupboards", href : "/categories/buffets-cabinets"},
+      {name : "Dining Table", href : "/categories/dining-tables"},
+    ],
+  },
+  {
+    name: "About Us",
     href: "/about",
   },
   {
-    name: "features",
-    href: "/features",
-  },
-  {
-    name: "contact",
+    name: "Contact",
     href: "/contact",
   },
 ];
@@ -113,18 +137,22 @@ export const newInStore = {
     {
       name: "chair",
       image: <ChairImg />,
+      link : "/categories/chairs"
     },
     {
       name: "bed",
       image: <BedImg />,
+      link : "/categories/beds"
     },
     {
       name: "cupboard",
       image: <CupboardImg />,
+      link : "/categories/buffets-cabinets"
     },
     {
       name: "lighting",
       image: <LightingImg />,
+      link : "/categories/pub-dining"
     },
   ],
 };

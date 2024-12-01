@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/logo.webp";
 import { CgMenuRight, CgClose } from "react-icons/cg";
-import { navigation } from "../data";
+import { navigation } from "../data"; // Assuming this is your navigation data
 import NavMobile from "./NavMobile";
 import { Link, useLocation } from "react-router-dom";
 
@@ -23,20 +22,51 @@ const Header = () => {
       : "bg-none" // Home page with no background
     : "bg-golden py-4 lg:py-6"; // Static background for all other pages
 
-  // Conditional Elements | Styling |:
-  // const bgStyle = bg ? "bg-golden py-4 lg:py-6" : "bg-none";
+  // Mobile nav menu icon (toggle between hamburger and close)
   const mobileNavMenu = mobileNav ? <CgClose /> : <CgMenuRight />;
   const mobileNavMenuStyle = mobileNav ? "left-0" : "-left-full";
-  const navItems = navigation.map((item, index) => (
-    <li key={index}>
-      <Link
-        to={item.href}
-        className={`text-white capitalize hover:border-b transition-all`}
-      >
-        {item.name}
-      </Link>
-    </li>
-  ));
+
+  // Navigation items (with dropdown handling)
+  const navItems = navigation.map((item, index) => {
+    // Check if the item has a subMenu (dropdown)
+    if (item.subMenu) {
+      return (
+        <li key={index} className="relative group">
+          <button className="text-white capitalize transition-all">
+            {item.name}
+          </button>
+
+          {/* Dropdown for desktop */}
+          <div className="absolute left-1/2 top-full transform -translate-x-1/2 group-hover:block hidden transition-all duration-300 opacity-0 group-hover:opacity-100">
+            <ul
+              className="bg-golden text-white py-2 px-4 mt-4 rounded-lg shadow-md"
+              style={{ transitionDelay: "0.2s" }} // Delay to ensure submenu stays visible
+            >
+              {item.subMenu.map((subItem, subIndex) => (
+                <li key={subIndex} className="px-4 py-2 text-center">
+                  <Link to={subItem.href} className="capitalize hover:border-b">
+                    {subItem.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      );
+    }
+
+    // If no dropdown, just render the link
+    return (
+      <li key={index}>
+        <Link
+          to={item.href}
+          className="text-white capitalize hover:border-b transition-all"
+        >
+          {item.name}
+        </Link>
+      </li>
+    );
+  });
 
   // Controlling the Scrolling Effect for Home page only
   useEffect(() => {
@@ -58,14 +88,6 @@ const Header = () => {
       document.removeEventListener("scroll", handleScroll);
     };
   }, [isHomePage]); // Depend on `isHomePage` to trigger effect only when on the Home page
-
-  // // Controlling the Scrolling Effect
-  // useEffect(() => {
-  //   console.log("Hello");
-  //   document.addEventListener("scroll", () =>
-  //     window.scrollY > 50 ? setBg(true) : setBg(false)
-  //   );
-  // });
 
   return (
     <section
@@ -90,7 +112,7 @@ const Header = () => {
           <section
             className={`${mobileNavMenuStyle} md:hidden fixed bottom-0 w-full max-w-xs h-screen transition-all`}
           >
-            <NavMobile />
+            <NavMobile mobileNav={mobileNav} setMobileNav={setMobileNav} />
           </section>
         </div>
       </div>

@@ -1,0 +1,36 @@
+{
+    "_id": {
+        "$oid": "6734e28304320fbc43b7c8d6"
+    },
+    "name": "Megan Platform Bed Available In 2 Colours & Multiple Sizes",
+    "has_variants": true,
+    "default_idx": 0,
+    "variants": [
+        {
+            "name": "Twin / Grey Fabric",
+            "price": "$199.00",
+            "images": [
+                "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517591/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/0.jpg",
+                "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517592/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/1.jpg"
+            ]
+        },
+        {
+            "name": "King / Brown Faux Leather",
+            "price": "$199.00",
+            "images": [
+                "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517594/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/2.jpg",
+                "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517596/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/3.jpg"
+            ]
+        }
+    ],
+    "description": "\nAvailable In Grey Fabric \\& Brown Faux Leather\n\n\nAvailable in Twin/Single , Queen \\& King Size\n\n\n",
+    "img_paths": [
+        "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517591/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/0.jpg",
+        "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517592/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/1.jpg",
+        "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517594/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/2.jpg",
+        "https://res.cloudinary.com/dmhl8fnda/image/upload/v1731517596/fw/bedroom-sets/4b9389a0-c8b7-4957-8d09-737b2f6053b5/3.jpg"
+    ],
+    "c_id": "4b9389a0-c8b7-4957-8d09-737b2f6053b5",
+    "category": "bedroom-sets",
+    "sub_category": "bedroom-sets"
+}

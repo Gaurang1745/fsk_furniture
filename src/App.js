@@ -20,7 +20,7 @@ function App() {
           <Route path="/categories/:category" element={<ProductCatalogue />} />
           {/* Dynamic route for product details */}
           <Route
-            path="/categories/:category/:product"
+            path="/categories/:category/:id"
             element={<ProductDetails />}
           />
           <Route path="/contact" element={<Contact />} />
